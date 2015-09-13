@@ -1,0 +1,105 @@
+docdata["P-51D"] =
+{
+    "ENGINE_SYSTEM": {
+                         "PROPELLER_RPM": {
+                                                  "category": "ENGINE_SYSTEM",
+                                              "control_type": "limited_dial",
+                                               "description": "Propeller RPM",
+                                                "identifier": "PROPELLER_RPM",
+                                                    "inputs": [ {
+                                                                  "description": "set the position of the dial",
+                                                                    "interface": "set_state",
+                                                                    "max_value": 65535
+                                                              }, {
+                                                                     "description": "turn the dial left or right",
+                                                                       "interface": "variable_step",
+                                                                       "max_value": 65535,
+                                                                  "suggested_step": 3200
+                                                              } ],
+                                                   "outputs": [ {
+                                                                      "address": 6150,
+                                                                  "description": "position of the potentiometer",
+                                                                         "mask": 65535,
+                                                                    "max_value": 65535,
+                                                                     "shift_by": 0,
+                                                                       "suffix": "",
+                                                                         "type": "integer"
+                                                              } ]
+                                          },
+                              "THROTTLE": {
+                                                  "category": "ENGINE_SYSTEM",
+                                              "control_type": "limited_dial",
+                                               "description": "Throttle",
+                                                "identifier": "THROTTLE",
+                                                    "inputs": [ {
+                                                                  "description": "set the position of the dial",
+                                                                    "interface": "set_state",
+                                                                    "max_value": 65535
+                                                              }, {
+                                                                     "description": "turn the dial left or right",
+                                                                       "interface": "variable_step",
+                                                                       "max_value": 65535,
+                                                                  "suggested_step": 3200
+                                                              } ],
+                                                   "outputs": [ {
+                                                                      "address": 6148,
+                                                                  "description": "position of the potentiometer",
+                                                                         "mask": 65535,
+                                                                    "max_value": 65535,
+                                                                     "shift_by": 0,
+                                                                       "suffix": "",
+                                                                         "type": "integer"
+                                                              } ]
+                                          }
+                     },
+       "Main Panel": {
+                         "ENGINE_RPM": {
+                                               "category": "Main Panel",
+                                           "control_type": "analog_gauge",
+                                            "description": "Engine RPM",
+                                             "identifier": "ENGINE_RPM",
+                                                 "inputs": [  ],
+                                                "outputs": [ {
+                                                                   "address": 6146,
+                                                               "description": "gauge position",
+                                                                      "mask": 65535,
+                                                                 "max_value": 65535,
+                                                                  "shift_by": 0,
+                                                                    "suffix": "",
+                                                                      "type": "integer"
+                                                           } ]
+                                       },
+                           "LG_GREEN": {
+                                               "category": "Main Panel",
+                                           "control_type": "led",
+                                            "description": "Landing Gear Green Light",
+                                             "identifier": "LG_GREEN",
+                                                 "inputs": [  ],
+                                                "outputs": [ {
+                                                                   "address": 6144,
+                                                               "description": "0 if light is off, 1 if light is on",
+                                                                      "mask": 1,
+                                                                 "max_value": 1,
+                                                                  "shift_by": 0,
+                                                                    "suffix": "",
+                                                                      "type": "integer"
+                                                           } ]
+                                       },
+                             "LG_RED": {
+                                               "category": "Main Panel",
+                                           "control_type": "led",
+                                            "description": "Landing Gear Red Light",
+                                             "identifier": "LG_RED",
+                                                 "inputs": [  ],
+                                                "outputs": [ {
+                                                                   "address": 6144,
+                                                               "description": "0 if light is off, 1 if light is on",
+                                                                      "mask": 2,
+                                                                 "max_value": 1,
+                                                                  "shift_by": 1,
+                                                                    "suffix": "",
+                                                                      "type": "integer"
+                                                           } ]
+                                       }
+                     }
+};
