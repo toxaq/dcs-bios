@@ -11,6 +11,7 @@ defineIndicatorLight("LG_GREEN", 80, "Main Panel", "Landing Gear Green Light")
 defineIndicatorLight("LG_RED",   82, "Main Panel", "Landing Gear Red Light")
 
 defineFloat("ENGINE_RPM", 23, {0, 1}, "Main Panel", "Engine RPM")
+defineFloat("MANIFOLD_PRESSURE", 10, {0, 1}, "Main Panel", "Manifold pressure")
 
 -- Get device id from devices.lua
 definePotentiometer("THROTTLE",      5, 3021, 43,  {0.0, 1.0}, "ENGINE_SYSTEM", "Throttle")
